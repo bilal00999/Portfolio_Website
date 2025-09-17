@@ -486,6 +486,7 @@ label {
 }
 .certficate_para a {
   color: #0000ff;
+  text-decoration: none;
 }
 @media (width<1120px) {
   html {
