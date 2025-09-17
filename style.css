@@ -88,7 +88,7 @@ html {
   overflow: hidden;
   border-right: 3px solid var(--secondtext-color);
   width: 0;
-  animation: typing 3s steps(20) forwards, blink 0.7s infinite;
+  animation: typing 3s steps(19) forwards, blink 0.7s infinite;
 }
 @keyframes typing {
   from {
