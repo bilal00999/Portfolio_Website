@@ -43,16 +43,15 @@ cards.forEach((card) => observer.observe(card));
 const certificates = document.querySelectorAll(".certficate");
 
 const certObserver = new IntersectionObserver(
-  (entries) => {
+  (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         certificates.forEach((cert, index) => {
           setTimeout(() => {
             cert.classList.add("show");
-          }, index * 300); // stagger each card
+          }, index * 300);
         });
-      } else {
-        certificates.forEach((cert) => cert.classList.remove("show"));
+        observer.disconnect();
       }
     });
   },
