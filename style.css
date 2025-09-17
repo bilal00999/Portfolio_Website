@@ -444,7 +444,26 @@ label {
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 15px;
   border-radius: 1rem;
+
+  opacity: 0;
+  transform: translateY(100px); /* start hidden */
 }
+
+.certficate.show {
+  animation: bottomToTop 0.8s ease-out forwards;
+}
+
+@keyframes bottomToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .certficate:hover {
   box-shadow: 7px 7px 20px var(--shadow-color);
   transition: 0.5s;
@@ -464,6 +483,9 @@ label {
 .certficate_para {
   font-size: 1.6rem;
   margin-bottom: 1rem;
+}
+.certficate_para a {
+  color: #0000ff;
 }
 @media (width<1120px) {
   html {
